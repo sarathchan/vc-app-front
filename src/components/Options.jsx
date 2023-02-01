@@ -48,7 +48,7 @@ const Options = ({ children }) => {
                     </h2>
                     <Input label='Name'style={{
             width: 150,
-          }} value={idToCall} placeholder=' Enter Name' onChange={(e) => { setIdToCall(e.target.value) }} />
+          }} value={idToCall} placeholder=" Enter friend's ID" onChange={(e) => { setIdToCall(e.target.value) }} />
                     {callAccepted && !callEnded ?
                     <div>
 

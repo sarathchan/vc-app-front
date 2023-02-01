@@ -2,15 +2,17 @@ import React from 'react'
 import VideoPlayer from './components/VideoPlayer'
 import Options from './components/Options'
 import Notifications from './components/Notifications'
-import { Typography } from 'antd';
+import { Row, Typography } from 'antd';
+import Glow from './components/glow';
 const { Title } = Typography;
 
 const App = () => {
   return (
     <div>
-       <div>
-       <Title className='main-Title'>Video Chat</Title>
-       </div>
+       <Row className='main-Title'>
+        {/* <Glow/> */}
+       <Title style={{color:'#fff'}} >Video Chat</Title>
+       </Row>
     <VideoPlayer />
     <Options>
         <Notifications/>

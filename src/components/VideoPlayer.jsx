@@ -15,16 +15,16 @@ const VideoPlayer = () => {
 
 
     return (
-        <div>
+        <div className='video-main'>
 
-            <Row>
+            <Row justify="center" gutter={[16, 16]}>
 { stream && (
 
-                <Card>
+                <Card className='senderCard'>
                     <h1>
                         {name || "Name"}
                     </h1>
-                    <video playsInline muted ref={myVideo} autoPlay className='myVideo' />
+                    <video playsInline  ref={myVideo} autoPlay className='myVideo' />
                 </Card>
 )}
 
@@ -34,10 +34,11 @@ const VideoPlayer = () => {
                 {
                     callAccepted && !callEnded && (
                         <Card>
+                            {console.log(call)}
                             <h1>
                                 {call.name || "Name"}
                             </h1>
-                            <video playsInline muted ref={userVideo} autoPlay className='myVideo' />
+                            <video playsInline  ref={userVideo} autoPlay className='myVideo' />
                         </Card>
                     )
                 }
