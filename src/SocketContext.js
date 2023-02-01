@@ -5,7 +5,7 @@ import Peer from 'simple-peer'
 const SocketContext = createContext();
 
 // const socket = io('http://localhost:5000');
-const socket = io('vcapp-back-production.up.railway.app');
+const socket = io('https://vcapp-back-production.up.railway.app/');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
