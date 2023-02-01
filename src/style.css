@@ -1,0 +1,30 @@
+body {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://i.pinimg.com/originals/8f/14/57/8f14578ef69a4c53352955d1e072eda6.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.main-Title{
+  background-color: white;
+  display:flex ;
+  justify-content: center;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+.options{
+  display:flex ;
+  justify-content: center;
+}
+.options-card{
+  
+}
