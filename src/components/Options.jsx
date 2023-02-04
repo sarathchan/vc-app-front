@@ -27,7 +27,7 @@ const Options = ({ children }) => {
                             Account Info
                         </h2>
 
-                        <Input label='Name'  style={{
+                        <Input  label='Name'  style={{
             width: 150,
           }} value={name} placeholder=' Enter Name' onChange={(e) => { setName(e.target.value) }} />
           <div>
