@@ -57,3 +57,13 @@ body {
 .mirrored {
   transform: scaleX(-1);
 }
+.DangerBtn{
+  margin-top: 10px;
+}
+.icon{
+  transform: rotate(227deg);
+}
+:where(.css-dev-only-do-not-override-ixblex).ant-card .ant-card-body {
+  padding: 0px 15px 15px 15px;
+  border-radius: 0 0 8px 8px;
+}

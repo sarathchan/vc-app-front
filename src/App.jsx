@@ -11,7 +11,7 @@ const App = () => {
     <div>
        <Row className='main-Title'>
         {/* <Glow/> */}
-       <Title style={{color:'#fff'}} >Video Chat</Title>
+       {/* <Title style={{color:'#fff'}} >Video Chat</Title> */}
        </Row>
     <VideoPlayer />
     <Options>

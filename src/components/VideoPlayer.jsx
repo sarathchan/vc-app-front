@@ -12,21 +12,23 @@ const VideoPlayer = () => {
         stream,
         callEnded,
         name } = useContext(SocketContext)
-
+console.log(call,"userVideo",userVideo,name)
 
     return (
         <div className='video-main'>
 
-            <Row justify="center" gutter={[16, 16]}>
-{ stream && (
+            <Row justify="center" 
+            // gutter={[16, 16]}
+            >
+                {stream && (
 
-                <Card className='senderCard'>
-                    <h1>
-                        {name || "Name"}
-                    </h1>
-                    <video playsInline  muted ref={myVideo} autoPlay  className='myVideo mirrored' />
-                </Card>
-)}
+                    <Card className='senderCard'>
+                        <h1>
+                            {name || "User"}
+                        </h1>
+                        <video playsInline muted ref={myVideo} autoPlay className='myVideo mirrored' />
+                    </Card>
+                )}
 
                 {/* ownuserVideo */}
 
@@ -34,11 +36,11 @@ const VideoPlayer = () => {
                 {
                     callAccepted && !callEnded && (
                         <Card>
-                            {console.log(call)}
+                            {console.log(call,"call")}
                             <h1>
                                 {call.name || "Name"}
                             </h1>
-                            <video playsInline  ref={userVideo} autoPlay className='myVideo' />
+                            <video playsInline ref={userVideo} autoPlay className='myVideo mirrored' />
                         </Card>
                     )
                 }

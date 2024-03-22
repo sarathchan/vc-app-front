@@ -3,6 +3,7 @@ import { Input, Row, Button, Col, Card } from 'antd';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { CopyOutlined ,PhoneOutlined} from '@ant-design/icons';
 import { useContext } from 'react';
+import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';
 import { SocketContext } from '../SocketContext'
 
 const Options = ({ children }) => {
@@ -52,8 +53,8 @@ const Options = ({ children }) => {
                     {callAccepted && !callEnded ?
                     <div>
 
-                        <Button type="danger" danger onClick={leaveCall}>
-                            Hangup
+                        <Button className='DangerBtn' type="primary" danger onClick={leaveCall}>
+                        Hangup <PhoneOutlined classsname='icon' />
                         </Button>
                     </div>
                         : 
@@ -61,7 +62,7 @@ const Options = ({ children }) => {
                             <Button
                             className='copybtn'
                             type='primary' 
-                            onClick={() => callUser(idToCall)}>
+                            onClick={() => callUser(idToCall,name)}>
                            <PhoneOutlined /> Call
                         </Button>
                         </div>
