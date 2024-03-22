@@ -5,8 +5,8 @@ import Peer from 'simple-peer'
 const SocketContext = createContext();
 
 // const socket = io('http://localhost:5000');
-const socket = io('http://192.168.1.11:5000');
-// const socket = io('https://vcapp-back-production.up.railway.app/');
+// const socket = io('http://192.168.1.11:5000');
+const socket = io('https://api-qa-s1.precium.ai/');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
