@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vc-app-front/static/css/main.0c80ab8f.css",
+    "main.js": "/vc-app-front/static/js/main.58b02ae0.js",
+    "index.html": "/vc-app-front/index.html",
+    "main.0c80ab8f.css.map": "/vc-app-front/static/css/main.0c80ab8f.css.map",
+    "main.58b02ae0.js.map": "/vc-app-front/static/js/main.58b02ae0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c80ab8f.css",
+    "static/js/main.58b02ae0.js"
+  ]
+}
