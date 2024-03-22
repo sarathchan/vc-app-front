@@ -18,7 +18,7 @@
     "socket.io-client": "^4.5.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://username.github.io/vc-app-front",
+  "homepage": "https://sarathchan.github.io/vc-app-front/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
