@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input, Row, Button, Col, Card,Modal } from 'antd';
+import { Input, Row, Button, Col, Card } from 'antd';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { CopyOutlined ,PhoneOutlined} from '@ant-design/icons';
 import { useContext } from 'react';
@@ -28,13 +28,13 @@ const Options = ({ children }) => {
                         </h2>
 
                         <Input  label='Name'  style={{
-            width: 150,
+            // width: 150,
           }} value={name} placeholder=' Enter Name' onChange={(e) => { setName(e.target.value) }} />
           <div>
             {console.log(me)}
 
                         <CopyToClipboard text={me}>
-                            <Button >
+                            <Button className='copybtn' >
                                 <CopyOutlined />Copy your Id
                             </Button>
                         </CopyToClipboard>
@@ -47,18 +47,20 @@ const Options = ({ children }) => {
                         Make a Call
                     </h2>
                     <Input label='Name'style={{
-            width: 150,
+            // width: 150,
           }} value={idToCall} placeholder=" Enter friend's ID" onChange={(e) => { setIdToCall(e.target.value) }} />
                     {callAccepted && !callEnded ?
                     <div>
 
-                        <Button type="primary" danger onClick={leaveCall}>
+                        <Button type="danger" danger onClick={leaveCall}>
                             Hangup
                         </Button>
                     </div>
                         : 
                             <div>
                             <Button
+                            className='copybtn'
+                            type='primary' 
                             onClick={() => callUser(idToCall)}>
                            <PhoneOutlined /> Call
                         </Button>

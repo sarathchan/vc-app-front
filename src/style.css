@@ -51,3 +51,9 @@ body {
   border-color: #2f353f;
   box-shadow: 0 4px 8px 0 #2f353f(0, 0, 0, 0.2), 0 6px 20px 0 #2f353f(0, 0, 0, 0.19);
 }
+.copybtn{
+  margin-top: 10px;
+}
+.mirrored {
+  transform: scaleX(-1);
+}

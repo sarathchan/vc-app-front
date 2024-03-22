@@ -3,7 +3,7 @@ import VideoPlayer from './components/VideoPlayer'
 import Options from './components/Options'
 import Notifications from './components/Notifications'
 import { Row, Typography } from 'antd';
-import Glow from './components/glow';
+// import Glow from './components/glow';
 const { Title } = Typography;
 
 const App = () => {

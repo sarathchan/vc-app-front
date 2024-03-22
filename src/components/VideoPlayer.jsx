@@ -24,7 +24,7 @@ const VideoPlayer = () => {
                     <h1>
                         {name || "Name"}
                     </h1>
-                    <video playsInline  muted ref={myVideo} autoPlay className='myVideo' />
+                    <video playsInline  muted ref={myVideo} autoPlay  className='myVideo mirrored' />
                 </Card>
 )}
 
