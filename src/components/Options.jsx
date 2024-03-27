@@ -5,6 +5,7 @@ import { CopyOutlined ,PhoneOutlined} from '@ant-design/icons';
 import { useContext } from 'react';
 import PhoneDisabledIcon from '@mui/icons-material/PhoneDisabled';
 import { SocketContext } from '../SocketContext'
+import axios from 'axios';
 
 const Options = ({ children }) => {
 
@@ -45,6 +46,27 @@ const Options = ({ children }) => {
             callUser(idToCall,"chan")
         }
     
+
+        useEffect(() => {
+            if(splittedUrl == ""){
+                if(me){
+
+            let body ={
+                vcId:me
+            }
+        axios.post(`https://api-training-nexus.valuehealthsolutions.com/gpo/create`,body)
+        .then((res) => {
+            console.log(res)
+        })
+        .catch((err) => {
+
+        })
+    }
+    } else {
+
+    }
+
+        }, [me])
       
 
  
