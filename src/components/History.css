@@ -1,13 +1,16 @@
 .bot-container {
     max-width: 400px;
     margin: 0 auto;
+    top: 350px;
+    left: 25px;
+    position: fixed;
     background: #2b2b2b;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     float: left;
     flex-direction: column;
-  }
+}
   
   .bot-header {
     padding: 10px;

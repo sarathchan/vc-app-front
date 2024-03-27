@@ -51,6 +51,24 @@ const Options = ({ children }) => {
 
 console.log(idToCall,"idToCall",typeof idToCall)
     return (
+        <>
+        <div className='hang'>
+        {callAccepted && !callEnded ?
+            <Row  className='hangRow'>
+        <Col  >
+                        <h2>
+                           End Call
+                        </h2>
+        <Button className='DangerBtn' type="primary" danger onClick={leaveCall}>
+                        Hangup <PhoneOutlined classsname='icon' />
+                        </Button>
+                        </Col>
+                        </Row>
+                        :
+                        <></>
+        }
+        </div>
+       
         <div className='options'>
                     <Card className='options-card'>
             <Row>
@@ -109,6 +127,7 @@ console.log(idToCall,"idToCall",typeof idToCall)
 
            
         </div >
+        </>
     )
 }
 

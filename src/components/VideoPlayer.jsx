@@ -35,7 +35,7 @@ console.log("userVideo",userVideo,name)
                         <Card>
                             {console.log(call,"call")}
                             <h1>
-                                {call.name || "Name"}
+                                {call.name || "GPO Manager"}
                             </h1>
                             <video playsInline ref={userVideo} autoPlay className='myVideo mirrored' />
                         </Card>
