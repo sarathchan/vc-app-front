@@ -3,6 +3,7 @@ import VideoPlayer from './components/VideoPlayer'
 import Options from './components/Options'
 import Notifications from './components/Notifications'
 import { Row, Typography } from 'antd';
+import History from './components/History';
 // import Glow from './components/glow';
 const { Title } = Typography;
 
@@ -17,6 +18,8 @@ const App = () => {
     <Options>
         <Notifications/>
     </Options>
+    <History/>
+
     </div>
   )
 }

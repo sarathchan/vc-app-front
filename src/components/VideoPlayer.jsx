@@ -12,7 +12,7 @@ const VideoPlayer = () => {
         stream,
         callEnded,
         name } = useContext(SocketContext)
-console.log(call,"userVideo",userVideo,name)
+console.log("userVideo",userVideo,name)
 
     return (
         <div className='video-main'>
@@ -30,9 +30,6 @@ console.log(call,"userVideo",userVideo,name)
                     </Card>
                 )}
 
-                {/* ownuserVideo */}
-
-                {/* userVideo */}
                 {
                     callAccepted && !callEnded && (
                         <Card>

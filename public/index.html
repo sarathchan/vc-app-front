@@ -26,14 +26,15 @@
   <title>React App</title>
   <script type="text/javascript">
     window.mychat = window.mychat ||
-      {}; window.mychat.server = 'http://127.0.0.1:5501/src';
+      {}; window.mychat.server = 'http://3.237.194.247:9000';
     window.mychat.iframeWidth = '400px';
      window.mychat.iframeHeight = '500px';
       window.mychat.botID = '4558fb23-0d08-4150-9b2a-161451840999';
+      
        (function () 
        { var mychat = document.createElement('script'); 
        mychat.type = 'text/javascript'; 
-       mychat.async = true; mychat.src = window.mychat.server + '/embed/widget.js';
+       mychat.async = true; mychat.src = window.mychat.server + '/widget.js';
         var s = document.getElementsByTagName('script')[0];
          s.parentNode.insertBefore(mychat, s); })();
           </script>

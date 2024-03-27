@@ -4,9 +4,9 @@ import Peer from 'simple-peer'
 
 const SocketContext = createContext();
 
-// const socket = io('http://localhost:5000');
+const socket = io('http://localhost:5000');
 // const socket = io('http://192.168.1.11:5000');
-const socket = io('https://api-uat-s1.precium.ai');
+// const socket = io('https://api-qa-s1.precium.ai/');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
@@ -78,6 +78,7 @@ const ContextProvider = ({ children }) => {
 
   const leaveCall = () => {
     setCallEnded(true);
+    setCallAccepted(false);
 
     connectionRef.current.destroy();
 

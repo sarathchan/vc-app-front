@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Input, Row, Button, Col, Card } from 'antd';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { CopyOutlined ,PhoneOutlined} from '@ant-design/icons';
@@ -18,7 +18,38 @@ const Options = ({ children }) => {
         leaveCall,
          } = useContext(SocketContext)
 
-    const [idToCall, setIdToCall] = useState('')
+        //  let url = window.location.href;
+        //  let callId = url.split("/").slice(-1);
+        //  let callerId = callId[0]
+        //  console.log(callerId)
+
+        //  useEffect(() => {
+        //     callUser(callerId,'user')
+        //  }, 1000)
+        const [idToCall, setIdToCall] = useState('')
+
+        let url = window.location.href;
+        let splittedUrl = url.split('/')[3];
+      
+      // const vcId = splittedUrl[0]
+      console.log(splittedUrl,"splittedUrl")
+      useEffect(() => {
+      setIdToCall(splittedUrl)
+     
+        callUser(idToCall,"chan")
+    
+      }, [splittedUrl])
+
+      
+        if(idToCall != ''){
+            callUser(idToCall,"chan")
+        }
+    
+      
+
+ 
+
+console.log(idToCall,"idToCall",typeof idToCall)
     return (
         <div className='options'>
                     <Card className='options-card'>
@@ -50,6 +81,7 @@ const Options = ({ children }) => {
                     <Input label='Name'style={{
             // width: 150,
           }} value={idToCall} placeholder=" Enter friend's ID" onChange={(e) => { setIdToCall(e.target.value) }} />
+
                     {callAccepted && !callEnded ?
                     <div>
 
