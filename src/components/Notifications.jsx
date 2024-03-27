@@ -31,13 +31,13 @@ const attendCall = () => {
   return (
     <div>
         
-      <audio ref={audioRef} src="/ringing-151670.mp3" />
+      <audio ref={audioRef}  src="/ringing-151670.mp3" />
         {call.isReceivingCall && !callAccepted && (
           
-        <Modal open={isModalOpen} onOk={attendCall} onCancel={handleCancel} >
+        <Modal okText='Attend' okType='primary' open={isModalOpen} onOk={attendCall} onCancel={handleCancel} >
 
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                <h2>{call.name} is calling:</h2>
+                <h2>{call.name} is calling</h2>
             </div>
         </Modal>
     )}</div>

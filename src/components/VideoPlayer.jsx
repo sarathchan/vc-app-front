@@ -11,9 +11,10 @@ const VideoPlayer = () => {
         userVideo,
         stream,
         callEnded,
+        me,
         name } = useContext(SocketContext)
 console.log("userVideo",userVideo,name)
-
+console.log(me,"myesld")
     return (
         <div className='video-main'>
 
@@ -23,16 +24,25 @@ console.log("userVideo",userVideo,name)
                 {stream && (
 
                     <Card className='senderCard'>
-                        <h1>
+                        <div style={{display:'flex'}}>
+                            <Row>
+
+                            
+                        <h1 style={{justifyContent:'center'}}>
                             {name || "User"}
                         </h1>
+                        <p className='id'>
+                            {me}
+                        </p>
+                            </Row>
+                        </div>
                         <video playsInline muted ref={myVideo} autoPlay className='myVideo mirrored' />
                     </Card>
                 )}
 
                 {
                     callAccepted && !callEnded && (
-                        <Card>
+                        <Card className='senderCard'>
                             {console.log(call,"call")}
                             <h1>
                                 {call.name || "GPO Manager"}
