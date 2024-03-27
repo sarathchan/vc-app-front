@@ -10,14 +10,15 @@
             "pointer-events": "none",
             "z-index": "2147483639",
             "position": "fixed",
-            "bottom": "10px",
+            "bottom": "30px",
+            "right" : "30px",
             "width": window.mychat.iframeWidth,
             "height": window.mychat.iframeHeight,
             "overflow": "hidden",
             "opacity": "1",
             "max-width": "100%",
-            "right": "10px",
-            "max-height": "100%"
+            "max-height": "100%",
+            "border-radius" : "8px"
         };
         Object.assign(iframe2.style, styles);
         var iframe1 = document.createElement('iframe');
