@@ -70,7 +70,7 @@ body {
 .senderCard, .ant-card {
   margin-bottom: 20px;
   width: calc(50% - 20px); /* Adjust width for responsiveness */
-  
+  padding:0px 2px 0px 2px !important;
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
 }
 .myVideo {
