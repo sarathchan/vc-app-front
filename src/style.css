@@ -101,3 +101,7 @@ body {
 .recievercard{
   padding:0px 2px 0px 2px;
 }
+:where(.css-ixblex).ant-card .ant-card-body {
+  padding:0px 2px 0px 2px;
+  border-radius: 0 0 8px 8px;
+}
