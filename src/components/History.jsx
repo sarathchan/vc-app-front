@@ -5,6 +5,8 @@ const History = () => {
     const botName = "History";
     const [open, setOpen] = useState(true);
   const chatWindowRef = useRef(null);
+  let url = window.location.href;
+  let splittedUrl = url.split('/')[3];
     const initialMessages = [
       { text: "Hello there!", isUser: false },
       { text: "Hi, how can I help you?", isUser: true },
@@ -44,6 +46,8 @@ const History = () => {
   
     return (
         <>
+        {!splittedUrl ?
+        <>
         {open ? 
             <div>
  <img
@@ -79,7 +83,10 @@ const History = () => {
           <button type="submit">Send</button>
         </form>
       </div>
+     
 }
+</>
+:<></>}
           </>
     );
 };
