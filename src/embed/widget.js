@@ -22,7 +22,7 @@
         Object.assign(iframe2.style, styles);
         var iframe1 = document.createElement('iframe');
         // chat source (external url)
-        iframe1.src = `http://localhost:3006/${window.mychat.botID}`;
+        iframe1.src = `https://widget-uat.precium.ai/${window.mychat.botID}`;
         iframe1.id = "iframe1";
         iframe1.allow = "autoplay; camera; microphone";
         var styles = {

@@ -2,8 +2,8 @@ import React, { useState,useRef,useEffect } from 'react';
 import './History.css';
 
 const History = () => {
-    const botName = "ChatBot";
-    
+    const botName = "History";
+    const [open, setOpen] = useState(true);
   const chatWindowRef = useRef(null);
     const initialMessages = [
       { text: "Hello there!", isUser: false },
@@ -37,13 +37,39 @@ const History = () => {
       
       e.target.reset();
     };
+
+    const handleToggleChatbot = () => {
+        setOpen((prevState) => !prevState);
+      };
   
     return (
+        <>
+        {open ? 
+            <div>
+ <img
+            className="BotButton"
+            onClick={handleToggleChatbot}
+            src='P-Logo.png'
+            alt="Chatbot"
+          />
+            </div>
+            : 
       <div className="bot-container">
-        <div className="bot-header">{botName}</div>
+        <div className="bot-header">
+            <h2>
+            {botName}
+            </h2>
+            <img
+                      className="closebutton"
+                      style={{ height: "20px", width: "20px" }}
+                      onClick={handleToggleChatbot}
+                      src="https://flaticons.net/icon.php?slug_category=mobile-application&slug_icon=close"
+                      alt="Chatbot"
+                    />
+        </div>
         <div className="chat-container" ref={chatWindowRef}>
           {messages.map((message, index) => (
-            <div key={index} className={message.isUser ? 'user-message' : 'bot-message'}>
+              <div key={index} className={message.isUser ? 'user-message' : 'bot-message'}>
               {message.text}
             </div>
           ))}
@@ -53,6 +79,8 @@ const History = () => {
           <button type="submit">Send</button>
         </form>
       </div>
+}
+          </>
     );
 };
 

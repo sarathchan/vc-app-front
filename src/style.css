@@ -105,3 +105,13 @@ body {
   padding:0px 2px 0px 2px;
   border-radius: 0 0 8px 8px;
 }
+.BotButton{
+  position: fixed;
+  width: 50px !important;
+  height: 50px !important;
+    left: 20px;
+    bottom: 20px;
+    width: 320px;
+    height: 450px;
+    border-radius: 15px;
+}
