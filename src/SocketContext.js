@@ -4,9 +4,9 @@ import Peer from 'simple-peer'
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:5000');
+// const socket = io('http://localhost:5000');
 // const socket = io('http://192.168.1.11:5000');
-// const socket = io('https://va-backend.valuehealthsolutions.com/');
+const socket = io('https://va-backend.valuehealthsolutions.com/');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
