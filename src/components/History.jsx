@@ -11,21 +11,25 @@ const History = () => {
   let url = window.location.href;
   let splittedUrl = url.split('/')[3];
 
-useEffect(() => {
-    axios.get(`https://api-training-nexus.valuehealthsolutions.com/gpo-history/findLatest`)
-    .then((res) => {
-        console.log(res.data.data.history,"st")
-        let obj = JSON.parse(res.data.data.history)
-        // let parsed = JSON.parse(obj)
-        // console.log (JSON.stringify( parsed),"chan")
-        console.log(obj,"chann")
-        setMessages(obj)
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const res = await axios.get('https://api-training-nexus.valuehealthsolutions.com/gpo-history/findLatest');
+            console.log(res.data.data.history, "st");
+            let obj = JSON.parse(res.data.data.history);
+            console.log(obj, "chann");
+            setMessages(obj);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-}, [])
+    fetchData(); // Initial fetch
+
+    const intervalId = setInterval(fetchData, 3000); // Fetch every 3 seconds
+
+    return () => clearInterval(intervalId); // Cleanup interval on unmount
+}, []);
 
 
 
