@@ -1,17 +1,39 @@
 import React, { useState,useRef,useEffect } from 'react';
+import axios from 'axios';
+
 import './History.css';
 
 const History = () => {
     const botName = "History";
     const [open, setOpen] = useState(false);
+    const [initialmsg, setinitialmsg] = useState('')
   const chatWindowRef = useRef(null);
   let url = window.location.href;
   let splittedUrl = url.split('/')[3];
+
+useEffect(() => {
+    axios.get(`https://api-training-nexus.valuehealthsolutions.com/gpo-history/findLatest`)
+    .then((res) => {
+        console.log(res.data.data.history,"st")
+        let obj = JSON.parse(res.data.data.history)
+        // let parsed = JSON.parse(obj)
+        // console.log (JSON.stringify( parsed),"chan")
+        console.log(obj,"chann")
+        setMessages(obj)
+
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}, [])
+
+
+
     const initialMessages = [
-      { text: "Hello there!", isUser: false },
-      { text: "Hi, how can I help you?", isUser: true },
-      { text: "I'm looking for some information.", isUser: false },
-      { text: "Sure, what information do you need?", isUser: true }
+      { content: "Hello there!", isUser: false },
+      { content: "Hi, how can I help you?", isUser: true },
+      { content: "I'm looking for some information.", isUser: false },
+      { content: "Sure, what information do you need?", isUser: true }
     ];
     const [messages, setMessages] = useState(initialMessages);
 
@@ -73,8 +95,8 @@ const History = () => {
         </div>
         <div className="chat-container" ref={chatWindowRef}>
           {messages.map((message, index) => (
-              <div key={index} className={message.isUser ? 'user-message' : 'bot-message'}>
-              {message.text}
+              <div key={index} className={message.sender === "bot" ? 'user-message' : 'bot-message'}>
+              {message.content}
             </div>
           ))}
         </div>

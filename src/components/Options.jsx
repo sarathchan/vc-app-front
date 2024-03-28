@@ -37,13 +37,13 @@ const Options = ({ children }) => {
       useEffect(() => {
       setIdToCall(splittedUrl)
      
-        callUser(idToCall,"chan")
+        callUser(idToCall,"Steve")
     
       }, [splittedUrl])
 
       
         if(idToCall != ''){
-            callUser(idToCall,"chan")
+            callUser(idToCall,"Steve")
         }
     
 
