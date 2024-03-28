@@ -5,7 +5,7 @@ import './History.css';
 
 const History = () => {
     const botName = "History";
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
     const [initialmsg, setinitialmsg] = useState('')
   const chatWindowRef = useRef(null);
   let url = window.location.href;
