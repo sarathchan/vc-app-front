@@ -3,7 +3,7 @@ import './History.css';
 
 const History = () => {
     const botName = "History";
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
   const chatWindowRef = useRef(null);
   let url = window.location.href;
   let splittedUrl = url.split('/')[3];
@@ -60,9 +60,9 @@ const History = () => {
             : 
       <div className="bot-container">
         <div className="bot-header">
-            <h2>
+            <p style={{fontWeight:600}}>
             {botName}
-            </h2>
+            </p>
             <img
                       className="closebutton"
                       style={{ height: "20px", width: "20px" }}
@@ -79,8 +79,8 @@ const History = () => {
           ))}
         </div>
         <form onSubmit={handleMessageSubmit} className="message-form">
-          <input type="text" name="message" placeholder="Type your message..." autoComplete="off" />
-          <button type="submit">Send</button>
+          {/* <input type="text" name="message" placeholder="Type your message..." autoComplete="off" />
+          <button type="submit">Send</button> */}
         </form>
       </div>
      
