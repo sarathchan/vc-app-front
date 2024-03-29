@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useContext } from 'react'
 import { Card, Row } from 'antd';
 import { SocketContext } from '../SocketContext'
+import { useState } from 'react';
 
 
 const VideoPlayer = () => {
@@ -16,8 +17,19 @@ const VideoPlayer = () => {
     console.log("userVideo", userVideo, name)
     console.log(me, "myesld")
 
+    const [classname, setclassname] = useState('callVideo mirrored')
+
     let url = window.location.href;
     let splittedUrl = url.split('/')[3];
+
+
+    useEffect(() => {
+if( callAccepted){
+    setclassname('myVideo mirrored')
+}
+    }, [callAccepted])
+
+
     return (
         <div className='video-main'>
 
@@ -40,7 +52,7 @@ const VideoPlayer = () => {
                         </h1> */}
                             </Row>
                         </div>
-                        <video playsInline muted ref={myVideo} autoPlay className='myVideo mirrored' />
+                        <video playsInline muted ref={myVideo} autoPlay className={classname} />
                         {/* </Card> */}
                     </div>
                 )}
