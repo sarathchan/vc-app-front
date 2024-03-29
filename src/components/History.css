@@ -1,5 +1,5 @@
 .bot-container {
-    max-width: 400px;
+    max-width: 410px;
     margin: 0 auto;
     bottom: 20px;
     left: 20px;
@@ -32,8 +32,8 @@
     padding: 10px;
     flex-grow: 1;
     display: flex;
-    height: 390px;
-    width: 320px;
+    height: 600px;
+    width: 400px;
     overflow-y: scroll;
     color: rgb(255, 255, 255);
     flex-direction: column;
@@ -57,11 +57,11 @@
   .user-message {
     background: #2b2b2b;
     padding: 8px;
-    margin: 5px 0;
+    margin: 9px 19px;
     border: 1px #6B24D6 solid;
     border-radius: 5px;
     align-self: flex-end;
-  }
+}
   
   .bot-message {  
       background: #2b2b2b;
