@@ -15,29 +15,34 @@ const VideoPlayer = () => {
         name } = useContext(SocketContext)
 console.log("userVideo",userVideo,name)
 console.log(me,"myesld")
+
+let url = window.location.href;
+let splittedUrl = url.split('/')[3];
     return (
         <div className='video-main'>
 
             <Row justify="center" 
             // gutter={[16, 16]}
             >
+                
                 {stream && (
 
-                    <Card className='senderCard'>
+<div>
+    
+
+                    {/* <Card className='senderCard'> */}
                         <div style={{display:'flex'}}>
                             <Row>
 
                             
-                        <h1 style={{justifyContent:'center'}}>
+                        {/* <h1 style={{justifyContent:'center'}}>
                             {name || "User"}
-                        </h1>
-                        <p className='id'>
-                            {me}
-                        </p>
+                        </h1> */}
                             </Row>
                         </div>
                         <video playsInline muted ref={myVideo} autoPlay className='myVideo mirrored' />
-                    </Card>
+                    {/* </Card> */}
+</div>
                 )}
 
                 {
@@ -47,7 +52,7 @@ console.log(me,"myesld")
                             <h1>
                                 {call.name || "GPO Manager"}
                             </h1>
-                            <video playsInline ref={userVideo} autoPlay className='myVideo mirrored' />
+                            <video playsInline ref={userVideo} autoPlay className='callVideo mirrored' />
                         </Card>
                     )
                 }
