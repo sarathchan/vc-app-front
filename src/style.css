@@ -74,14 +74,16 @@ body {
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
 }
 .myVideo {
-    width: 15%;
-    height: auto;
+    bottom: px;
     position: absolute;
-    filter: saturate(125%);
-    bottom: -54px;
-    z-index: 999;
     right: 27%;
+    bottom: -12%;
+    border: 1px solid black;
+    width: 14%;
+    bottom: 19%;
+    z-index: 999;
 }
+
 
 .callVideo {
   width: 100%;
