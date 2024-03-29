@@ -13,42 +13,42 @@ const VideoPlayer = () => {
         callEnded,
         me,
         name } = useContext(SocketContext)
-console.log("userVideo",userVideo,name)
-console.log(me,"myesld")
+    console.log("userVideo", userVideo, name)
+    console.log(me, "myesld")
 
-let url = window.location.href;
-let splittedUrl = url.split('/')[3];
+    let url = window.location.href;
+    let splittedUrl = url.split('/')[3];
     return (
         <div className='video-main'>
 
-            <Row justify="center" 
+            <Row justify="center"
             // gutter={[16, 16]}
             >
-                
+
                 {stream && (
 
-<div>
-    
+                    <div>
 
-                    {/* <Card className='senderCard'> */}
-                        <div style={{display:'flex'}}>
+
+                        {/* <Card className='senderCard'> */}
+                        <div style={{ display: 'flex' }}>
                             <Row>
 
-                            
-                        {/* <h1 style={{justifyContent:'center'}}>
+
+                                {/* <h1 style={{justifyContent:'center'}}>
                             {name || "User"}
                         </h1> */}
                             </Row>
                         </div>
                         <video playsInline muted ref={myVideo} autoPlay className='myVideo mirrored' />
-                    {/* </Card> */}
-</div>
+                        {/* </Card> */}
+                    </div>
                 )}
 
                 {
                     callAccepted && !callEnded && (
                         <Card className='senderCard'>
-                            {console.log(call,"call")}
+                            {console.log(call, "call")}
                             <h1>
                                 {call.name || "GPO Manager"}
                             </h1>
