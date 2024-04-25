@@ -16,6 +16,7 @@
     "antd": "^5.1.7",
     "axios": "^1.6.8",
     "peer": "^0.6.1",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",

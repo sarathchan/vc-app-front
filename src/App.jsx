@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import VideoPlayer from './components/VideoPlayer'
 import Options from './components/Options'
 import Notifications from './components/Notifications'
@@ -8,6 +8,37 @@ import History from './components/History';
 const { Title } = Typography;
 
 const App = () => {
+  const process = {
+    env: {
+      NODE_ENV: 'development', // Set your desired environment
+    },
+  };
+
+  const Buffer = {
+    data: [],
+  
+    push(data) {
+      this.data.push(data);
+    },
+  
+    pop() {
+      return this.data.pop();
+    },
+  
+    get length() {
+      return this.data.length;
+    },
+  };
+
+  useEffect(() => {
+    // Example usage
+    Buffer.push('Some data');
+    Buffer.push('More data');
+    console.log(Buffer.data); // Output: ['Some data', 'More data']
+    console.log(Buffer.length); // Output: 2
+
+    console.log(process.env.NODE_ENV); // Output: development
+  }, []);
   return (
     <div>
        <Row className='main-Title'>
